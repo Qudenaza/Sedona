@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" >
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <ul class="main-navigation__items">
+        <li class="main-navigation__item"><a href="#">Информация</a></li>
+        <li class="main-navigation__item"><a href="#">Фото и видео</a></li>
+        <li class="main-navigation__item"><a href="#">Карта штата</a></li>
+        <li class="main-navigation__item"><a href="#">Гостиницы</a></li>
+      </ul>
+    </nav>
+    <img src="img/logo-welcome.png" alt="Добро пожаловать в седону" width="256" height="86">
+    <b class="main-header__title">Седона &#8212; небольшой городок в аризоне,<br> заслуживающий большего!</b>
+    <p class="main-header__promo">Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+  </header>
+  <main class="main-content">
+    <section class="main-content__reason reason-one">
+      <div class="reason-one--left">
+        <h2 class="reason__title">Настоящий городок</h2>
+        <span class="reason__number">№1</span>
+        <p class="reason__description">Седона &#8212 не аттракцион для туристов, там течет своя жизнь</p>
+      </div>
+      <div class="reason-one--right">
+        <img src="img/gorodok.jpg" alt="Настоящий городок" width="800" height="256">
+      </div>
+    </section>
+    <section class="main-content__reason reason-two">
+      <h2 class="visually-hidden">Дом, еда, сувениры</h2>
+      <div class="reason-house">
+        <h2 class="reason-two__title">Жилье</h2>
+        <p class="reason-two__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
+      <div class="reason-food">
+        <h2 class="reason-two__title">Еда</h2>
+        <p class="reason-two__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+      <div class="reason-souvenirs">
+        <h2 class="reason-two__title">Сувениры</h2>
+        <p class="reason-two__description">Не только китайского, но и местного производства!</p>
+      </div>
+    </section>
+    <section class="main-content__reason reason-three">
+      <div class="reason-three--left">
+        <h2 class="reason__title">Там есть мост дьявола</h2>
+        <span class="reason__number">№2</span>
+        <p class="reason__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      </div>
+      <div class="reason-three--right">
+        <img src="img/devil.jpg" alt="Мост дьявола" width="800" height="256">
+      </div>
+    </section>
+    <section class="main-content__reason reason-four">
+      <div class="reason-square">
+        <h2 class="reason-four__title">Небольшая площадь</h2>
+        <span class="reason__number">№3</span>
+        <p class="reason-four__description">Все достопримечательности находятся очень близко</p>
+      </div>
+      <div class="reason-road">
+        <h2 class="reason-four__title">Красивая дорога</h2>
+        <span class="reason__number">№4</span>
+        <p class="reason-four__description">Ехать в седону из лас-вегаса совсем не скучно!</p>
+      </div>
+      <div class="reason-tourists">
+        <h2 class="reason-four__title">Мало туристов</h2>
+        <span class="reason__number">№5</span>
+        <p class="reason-four__description">Большинство едет в гранд каньон и толпится там</p>
+      </div>
+    </section>
+    <article class="main-content__hotels">
+      <section class="hotels__search">
+        <h2 class="visually-hidden">Поиск отелей</h2>
+        <b class="hotels__title">Заинтересовались?</b>
+        <p class="hotels__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <b class="hotels__form">Поиск гостиницы в седоне</b>
+          <form action="#" class="hotels__search-form">
+            <p class="hotels__date">
+              <label for="enter-date">Дата заезда:</label>
+              <input type="text" name="enterdate" value="" id="enter-date" placeholder="24 апреля 2017">
+            </p>
+            <p class="hotels__date">
+              <label for="exit-date">Дата выезда:</label>
+              <input type="text" name="exitdate" value="" id="exit-date" placeholder="4 июля 2017">
+            </p>
+            <div class="hotels__age">
+              <p class="hotels__grown">
+                <label for="grouwn-count">Взрослые:</label>
+                <button type="button">&#10134;</button>
+                <input type="text" name="adults" value="2" id="grown-count">
+                <button type="button">&#10133;</button>
+              </p>
+              <p class="hotels__child">
+                <label for="child-count">Дети:</label>
+                <button type="button">&#10134;</button>
+                <input type="text" name="children" value="0" id="child-count">
+                <button type="button">&#10133;</button>
+              </p>
+            </div>
+
+            <!-- <p class="hotels__age">
+              <label for="adults-count" class="eighteen-plus">Взрослые:</label>
+              <input type="text" name="adults" value="" id="adults-count" placeholder="2">
+              <label for="children" class="eighteen-minus">Дети:</label>
+              <input type="text" name="children" value="" id="children-count" placeholder="0">
+            </p> -->
+            <button type="submit" class="hotel__button">Найти</button>
+          </form>
+      </section>
+      <section class="hotels__map">
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209265.32030070634!2d-111.77476960439724!3d34.96235718121395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1504604379275" width="1200" height="473" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
+    </article>
+  </main>
+  <footer class="main-footer">
+    <b class="main-footer__hashteg">#Visitsedona</b>
+    <div class="main-footer__socials">
+      <ul class="social__buttons">
+        <li class="social__button social__tw"><a href="#"></a></li>
+        <li class="social__button social__fb"><a href="#"></a></li>
+        <li class="social__button social__yt"><a href="#"></a></li>
+      </ul>
+    </div>
+    <div class="main-footer__authors">
+      <span class="authors__text">Website by</span>
+      <img src="img/academylogo.svg" alt="Иконка академии" width="115" height="41">
+    </div>
+  </footer>
+  <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
