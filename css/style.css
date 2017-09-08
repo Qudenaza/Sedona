@@ -14,6 +14,15 @@ html, body {
   display: none;
 }
 
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(128,128,128,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(128,128,128,1);
+  box-shadow: 0px 0px 8px 0px rgba(128,128,128,1);
+}
+
 .main-header {
   display: flex;
   flex-direction: column;
@@ -282,6 +291,8 @@ html, body {
 }
 
 .hotels__form {
+  position: relative;
+  z-index: 10;
   padding: 30px 140px 30px 140px;
   line-height: 26px;
   color: #ffffff;
@@ -307,13 +318,29 @@ html, body {
   position: absolute;
   left: 315px;
   top: 289px;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(128,128,128,1);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(128,128,128,1);
+    box-shadow: 0px 2px 8px 0px rgba(128,128,128,1);
 }
 
 
+.modal-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
+}
+
+
+@-webkit-keyframes bounce {
+  0%   {-webkit-transform: translateX(-2000px);transform: translateX(-2000px); }
+  70%  {-webkit-transform: translateX(30px);transform: translateX(30px);    }
+  90%  {-webkit-transform: translateX(-10px);transform: translateX(-10px);   }
+  100% {-webkit-transform: translateX(0);transform: translateX(0);       }
+}
 
 
 .hotels__date {
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   margin-top: 0;
 }
 
@@ -324,7 +351,7 @@ html, body {
 .hotels__date input {
   padding: 5px 38px 5px 13px;
   margin-left: 17px;
-  width: 293px;
+  width: 292px;
   background: #f2f2f2 url("../img/calendar.png") no-repeat 316px;
   border: none;
   outline: none;
@@ -348,10 +375,21 @@ html, body {
   font-size: 14px;
 }
 
-.hotels__age input {
+.hotels__grown input {
   width: 38px;
   height: 36px;
-  margin: 0 -7px 0 -7px;
+  margin: 0 -7px 0 24px;
+  text-align: center;
+  background: #f1f1f1;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+
+.hotels__child input {
+  width: 38px;
+  height: 36px;
+  margin-right: 23px;
   text-align: center;
   background: #f1f1f1;
   font-weight: 700;
@@ -380,8 +418,8 @@ html, body {
 }
 
 .hotels__age button {
-  width: 38px;
-  height: 38px;
+  position: relative;
+  font-size: 0;
   background: #f1f1f1;
   color: #a9a9a9;
   outline: none;
@@ -389,12 +427,76 @@ html, body {
   cursor: pointer;
 }
 
-.hotels__age button:hover {
-  color: #000000;
+.hotels__age .adults-minus::before {
+  position: absolute;
+  top: -23px;
+  right: -28px;
+  width: 38px;
+  height: 38px;
+  background: #f1f1f1 url("../img/minus.svg") no-repeat 50%;
+  content: "";
 }
 
-.hotels__age button:active {
-  color: #81b3d2;
+.adults-minus:hover::before {
+  background: #f1f1f1 url("../img/minus-hover.svg") no-repeat 50%;
+}
+
+.adults-minus:active::before {
+  background: #f1f1f1 url("../img/minus-active.svg") no-repeat 50%;
+}
+
+.hotels__age .adults-plus::before {
+  position: absolute;
+  top: -23px;
+  left: 3px;
+  width: 38px;
+  height: 38px;
+  background: #f1f1f1 url("../img/plus.svg") no-repeat 50%;
+  content: "";
+}
+
+.adults-plus:hover::before {
+  background: #f1f1f1 url("../img/plus-hover.svg") no-repeat 50%;
+}
+
+.adults-plus:active::before {
+  background: #f1f1f1 url("../img/plus-active.svg") no-repeat 50%;
+}
+
+.hotels__age .children-minus::before {
+  position: absolute;
+  top: -23px;
+  right: -5px;
+  width: 38px;
+  height: 38px;
+  background: #f1f1f1 url("../img/minus.svg") no-repeat 50%;
+  content: "";
+}
+
+.children-minus:hover::before {
+  background: #f1f1f1 url("../img/minus-hover.svg") no-repeat 50%;
+}
+
+.children-minus:active::before {
+  background: #f1f1f1 url("../img/minus-active.svg") no-repeat 50%;
+}
+
+.hotels__age .children-plus::before {
+  position: absolute;
+  top: -23px;
+  left: -27px;
+  width: 38px;
+  height: 38px;
+  background: #f1f1f1 url("../img/plus.svg") no-repeat 50%;
+  content: "";
+}
+
+.children-plus:hover::before {
+  background: #f1f1f1 url("../img/plus-hover.svg") no-repeat 50%;
+}
+
+.children-plus:active::before {
+  background: #f1f1f1 url("../img/plus-active.svg") no-repeat 50%;
 }
 
 .hotels__grown label {
@@ -402,83 +504,15 @@ html, body {
 }
 
 .hotels__child label {
-  margin-right: 31px;
+  margin-right: 45px;
 }
-
-/*.hotels__age label {
-  font-size: 14px;
-  position: relative;
-}
-
-.eighteen-plus::before {
-  content: " ";
-  position: absolute;
-  left: 127px;
-  top: 8px;
-  width: 11px;
-  height: 11px;
-  background: url("../img/minus.png") no-repeat
-}
-
-.eighteen-plus::after {
-  content: " ";
-  position: absolute;
-  left: 200px;
-  top: 3px;
-  width: 11px;
-  height: 11px;
-  background: url("../img/plus.png") no-repeat
-}
-
-.eighteen-minus::before {
-  content: " ";
-  position: absolute;
-  left: 82px;
-  top: 8px;
-  width: 11px;
-  height: 11px;
-  background: url("../img/minus.png") no-repeat
-}
-
-.eighteen-minus::after {
-  content: " ";
-  position: absolute;
-  left: 158px;
-  top: 3px;
-  width: 11px;
-  height: 11px;
-  background: url("../img/plus.png") no-repeat
-}
-
-.hotels__age  {
-  display: inline-block;
-  margin-top: 6px;
-}
-
-.eighteen-plus {
-  margin-right: 38px;
-}
-
-.eighteen-minus {
-  margin-right: 27px;
-}
-
-.hotels__age input[name="adults"] {
-  margin-right: 53px;
-}
-
-.hotels__age input {
-  width: 23px;
-  background: #f2f2f2;
-  border: none;
-  outline: none;
-  padding: 5px 38px 5px 46px;
-}*/
 
 .hotels__map {
   max-height: 473;
   background: url("../img/map.jpg") no-repeat;
 }
+
+
 
 .hotel__button {
   cursor: pointer;
@@ -504,11 +538,11 @@ html, body {
 }
 
 
-.main-footer {
+footer.main-footer {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  padding-top: 37px;
+  padding-top: 33px;
   padding-bottom: 37px;
   background: #ffffff;
 }
@@ -576,8 +610,13 @@ html, body {
   display: flex;
   align-items: center;
 }
-.main-footer__authors img:hover {
-  background:url("../img/academy-hover.png") no-repeat;
+
+svg:hover path {
+  fill: #81b3d2;
+}
+
+svg:active path {
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .authors__text {
@@ -586,6 +625,9 @@ html, body {
   font-weight: 400;
 }
 
-.modal-show {
-  display: block;
+/* Стилизация страницы отелей */
+
+.content-header {
+  height: 273px;
+  background: url("../img/content-background.jpg") no-repeat;
 }
