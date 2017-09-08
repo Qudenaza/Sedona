@@ -20,6 +20,63 @@
         <li class="main-navigation__item"><a href="content.html">Гостиницы</a></li>
       </ul>
     </nav>
+    <section class="hotel-form">
+    <h2 class="visually-hidden">Выбор отеля</h2>
+    <form action="#">
+      <div class="infrastracture">
+        <b class="form-title">Инфраструктура:</b>
+        <label class="specials">
+          <input type="checkbox" name="infrastracture" value="pool">
+          <span class="control-indicator"></span> Бассеин
+        </label>
+        <label class="specials">
+          <input type="checkbox" name="infrastracture" value="parking">
+          <span class="control-indicator"></span> Парковка
+        </label>
+        <label class="specials">
+          <input type="checkbox" name="infrastracture" value="wi-fi">
+          <span class="control-indicator"></span> Wi-fi
+        </label>
+      </div>
+      <div class="housing-type">
+        <b class="form-title">Тип жилья:</b>
+        <label class="specials">
+          <input type="checkbox" name="housing-type" value="hotel">
+          <span class="control-indicator"></span>
+          Гостиница
+        </label>
+        <label  class="specials">
+          <input type="checkbox" name="housing-type" value="motel">
+          <span class="control-indicator"></span>
+          Мотель
+        </label>
+        <label  class="specials">
+          <input type="checkbox" name="housing-type" value="appartaments">
+          <span class="control-indicator"></span>
+          Апартаменты
+        </label>
+      </div>
+      <div class="filter-range">
+        <b class="range-title">Стоимость в сутки (Р):</b>
+        <div class="price-controls">
+          <label class="min-price">От 
+            <input type="text" name="min-price" value="0">
+          </label>
+          <label class="max-price">До
+            <input type="text" name="max-price" value="3000">
+          </label>
+        </div>
+        <div class="range-controls">
+          <div class="scale">
+            <div class="bar"></div>
+          </div>
+          <div class="range-toogle range-toogle-min"></div>
+          <div class="range-toogle range-toogle-max"></div> 
+        </div>
+        <button class="btn-transparent" type="submit">Показать</button>
+      </div>
+    </form>
+    </section>
   </header>
     <main class="main-content">
     
